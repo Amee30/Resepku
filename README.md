@@ -20,7 +20,7 @@ Recipe Example <br/>
 
 
 ### Project UTS Mobile Programming Dasar Semester 4
-###### Made By Android Studio
+###### Made From Android Studio
 ###### Test Device Samsung A35
 
 ## Getting Started
