@@ -1,7 +1,7 @@
 # Resepku
 
-My First Flutter Project.
-A Simple Recipe App.
+My First Flutter Project. <br/>
+A Simple Recipe App. <br/>
 Display only without backend,
 But still displaying recipes.
 
