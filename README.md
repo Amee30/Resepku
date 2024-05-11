@@ -13,9 +13,9 @@ and it's all Indonesian cuisine
 2. Recipe Menu with Food Image
 
 ## Preview
-Main Menu Preview
-<img src="https://github.com/Amee30/Resepku/blob/f28ba1e4474035f89263747eb003b7fb2b8ef58b/assets/preview1.jpg" width="200" />
-Recipe Example
+Main Menu Preview <br/>
+<img src="https://github.com/Amee30/Resepku/blob/f28ba1e4474035f89263747eb003b7fb2b8ef58b/assets/preview1.jpg" width="400" />
+Recipe Example <br/>
 ![Recipe Example](https://github.com/Amee30/Resepku/blob/f28ba1e4474035f89263747eb003b7fb2b8ef58b/assets/preview2.jpg)
 
 
