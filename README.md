@@ -16,7 +16,7 @@ and it's all Indonesian cuisine
 Main Menu Preview <br/>
 <img src="https://github.com/Amee30/Resepku/blob/f28ba1e4474035f89263747eb003b7fb2b8ef58b/assets/preview1.jpg" width="400" />
 Recipe Example <br/>
-![Recipe Example](https://github.com/Amee30/Resepku/blob/f28ba1e4474035f89263747eb003b7fb2b8ef58b/assets/preview2.jpg)
+<img src="https://github.com/Amee30/Resepku/blob/f28ba1e4474035f89263747eb003b7fb2b8ef58b/assets/preview2.jpg" width="400" />
 
 
 ### Project UTS Mobile Programming Dasar Semester 4
