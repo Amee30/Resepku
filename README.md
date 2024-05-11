@@ -14,7 +14,7 @@ and it's all Indonesian cuisine
 
 ## Preview
 Main Menu Preview
-![Main Menu](https://github.com/Amee30/Resepku/blob/f28ba1e4474035f89263747eb003b7fb2b8ef58b/assets/preview1.jpg)
+<img src="https://github.com/Amee30/Resepku/blob/f28ba1e4474035f89263747eb003b7fb2b8ef58b/assets/preview1.jpg" width="200" />
 Recipe Example
 ![Recipe Example](https://github.com/Amee30/Resepku/blob/f28ba1e4474035f89263747eb003b7fb2b8ef58b/assets/preview2.jpg)
 
