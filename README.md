@@ -19,6 +19,10 @@ Recipe Example
 ![Recipe Example](https://github.com/Amee30/Resepku/blob/f28ba1e4474035f89263747eb003b7fb2b8ef58b/assets/preview2.jpg)
 
 
+### Project UTS Mobile Programming Dasar Semester 4
+###### Made By Android Studio
+###### Test Device Samsung A35
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
