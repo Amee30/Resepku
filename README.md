@@ -1,6 +1,16 @@
 # Resepku
 
+My First Flutter Project
 A Simple Recipe App
+Display only without backend,
+But still displaying recipes
+
+There are 7 recipe in this project
+and it's all Indonesian cuisine
+
+## Feature
+1. Scrollable Recipe Menu
+2. Recipe Menu with Food Image
 
 ## Getting Started
 
