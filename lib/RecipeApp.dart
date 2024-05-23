@@ -24,214 +24,32 @@ class RecipeAppMenu extends StatelessWidget {
         child: Column(
           children: [
             // Resep 1
-            Container(
-              height: 150,
-              width: 400,
-              margin: const EdgeInsets.all(20),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                image: const DecorationImage(
-                    image: AssetImage('assets/nasigoreng.jpg'),
-                    fit: BoxFit.cover
-                ),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Resep Nasi Goreng',
-                    style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold ),
-                  ),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const ResepNasiGrng()));
-                      },
-                      child: const Text('Lihat Resep'))
-                ],
-              ),
+            resepCointainer(
+                context, 'Resep Nasi Goreng', 'assets/nasigoreng.jpg', const ResepNasiGrng()
             ),
             //Resep 2
-            Container(
-              height: 150,
-              width: 400,
-              margin: const EdgeInsets.all(20),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                image: const DecorationImage(
-                    image: AssetImage('assets/telurdadar.jpg'),
-                    fit: BoxFit.cover
-                ),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Resep Telur Dadar',
-                    style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const ResepTelurDDR()));
-                      },
-                      child: const Text('Lihat Resep'))
-                ],
-              ),
+            resepCointainer(
+                context, 'Resep Telur Dadar', 'assets/telurdadar.jpg', const ResepTelurDDR()
             ),
             // Resep 3
-            Container(
-              height: 150,
-              width: 400,
-              margin: const EdgeInsets.all(20),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                image: const DecorationImage(
-                    image: AssetImage('assets/rendang.jpg'),
-                    fit: BoxFit.cover
-                ),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Resep Rendang Sapi',
-                    style: TextStyle(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const ResepRendang()));
-                      },
-                      child: const Text('Lihat Resep'))
-                ],
-              ),
+            resepCointainer(
+                context, 'Resep Rendang Sapi', 'assets/rendang.jpg', const ResepRendang()
             ),
             // Resep 4
-            Container(
-              height: 150,
-              width: 400,
-              margin: const EdgeInsets.all(20),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                image: const DecorationImage(
-                    image: AssetImage('assets/bakso.jpg'),
-                    fit: BoxFit.cover
-                ),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Resep Bakso',
-                    style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const ResepBakso()));
-                      },
-                      child: const Text('Lihat Resep'))
-                ],
-              ),
+            resepCointainer(
+                context, 'Resep Bakso', 'assets/bakso.jpg', const ResepBakso()
             ),
             // Resep 5
-            Container(
-              height: 150,
-              width: 400,
-              margin: const EdgeInsets.all(20),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  image: const DecorationImage(
-                      image: AssetImage('assets/nasikuning.jpg'),
-                      fit: BoxFit.cover
-                  )
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Resep Nasi Kuning',
-                    style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold ),
-                  ),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const ResepNasiKng()));
-                      },
-                      child: const Text('Lihat Resep'))
-                ],
-              ),
+            resepCointainer(
+                context, 'Resep Nasi Kuning', 'assets/nasikuning.jpg', const ResepNasiKng()
             ),
             // Resep 6
-            Container(
-              height: 150,
-              width: 400,
-              margin: const EdgeInsets.all(20),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  image: const DecorationImage(
-                      image: AssetImage('assets/capcay.jpg'),
-                      fit: BoxFit.cover
-                  )
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Resep CapCay',
-                    style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold ),
-                  ),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const ResepCapCay()));
-                      },
-                      child: const Text('Lihat Resep'))
-                ],
-              ),
+            resepCointainer(
+                context, 'Resep Capcay', 'assets/capcay.jpg', const ResepCapCay()
             ),
             // Resep 7
-            Container(
-              height: 150,
-              width: 400,
-              margin: const EdgeInsets.all(20),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  image: const DecorationImage(
-                      image: AssetImage('assets/ayamgoreng.jpg'),
-                      fit: BoxFit.cover
-                  )
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Text(
-                    'Resep Ayam Goreng',
-                    style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold ),
-                  ),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const ResepAyamGrng()));
-                      },
-                      child: const Text('Lihat Resep'))
-                ],
-              ),
+            resepCointainer(
+                context, 'Resep Ayam Goreng', 'assets/ayamgoreng.jpg', const ResepAyamGrng()
             ),
           ],
         ),
@@ -239,6 +57,39 @@ class RecipeAppMenu extends StatelessWidget {
     );
   }
 }
+
+  Widget resepCointainer(BuildContext context, String title, String imgPath, Widget targetPage){
+    return Container(
+      height: 150,
+      width: 400,
+      margin: const EdgeInsets.all(20),
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          image: DecorationImage(
+              image: AssetImage(imgPath),
+              fit: BoxFit.cover
+          )
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Text(
+            title,
+            style: const TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold ),
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => targetPage));
+              },
+              child: const Text('Lihat Resep'))
+        ],
+      ),
+    );
+  }
+
 
 class ResepNasiGrng extends StatelessWidget {
   const ResepNasiGrng({super.key});
