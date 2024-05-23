@@ -1,14 +1,19 @@
+import 'package:Resepku/DrawerContent.dart';
 import 'package:flutter/material.dart';
 
 class RecipeAppMenu extends StatelessWidget {
-  const RecipeAppMenu({super.key});
+  RecipeAppMenu({super.key});
+
+  final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldkey,
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        leading: IconButton(onPressed: (){}, icon: const Icon(Icons.menu,color: Colors.white,)),
+        leading: IconButton(onPressed: () => _scaffoldkey.currentState!.openDrawer(),
+            icon: const Icon(Icons.menu,color: Colors.white,)),
         title: Image.asset(
           'assets/appbaricon.png',
           height: 50,
@@ -20,6 +25,7 @@ class RecipeAppMenu extends StatelessWidget {
           IconButton(onPressed: (){}, icon: const Icon(Icons.search,color: Colors.white,))
         ],
       ),
+      drawer: const Drawercontent(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -528,6 +534,61 @@ Selamat mencoba dan menikmati ayam goreng yang Anda buat sendiri di rumah! Selam
             ),
           )
         ],
+      ),
+    );
+  }
+}
+
+class AboutApp extends StatelessWidget {
+  const AboutApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: const Text('About App', style: TextStyle(color: Colors.white),),
+      ),
+      body: const Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'Resepku',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Version: 1.0.0',
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Deskripsi:',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Resepku adalah sebuah aplikasi yang dirancang untuk para pecinta memasak, '
+                  'baik pemula maupun yang sudah mahir dalam seni kuliner. '
+                  'Aplikasi ini menyediakan beragam resep masakan dari berbagai belahan dunia, mulai dari masakan tradisional hingga masakan kontemporer. '
+                  'Dengan tampilan yang bersih dan mudah digunakan, Resepku memungkinkan pengguna untuk menjelajahi berbagai resep, menandai favorit mereka, '
+                  'dan bahkan berbagi resep dengan teman-teman mereka.',
+              style: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
