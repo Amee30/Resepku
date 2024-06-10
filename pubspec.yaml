@@ -69,6 +69,7 @@ flutter:
       - assets/capcay.jpg
       - assets/ayamgoreng.jpg
       - assets/drawerimg.jpg
+      - assets/applogo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

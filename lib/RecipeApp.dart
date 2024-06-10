@@ -30,31 +30,31 @@ class RecipeAppMenu extends StatelessWidget {
         child: Column(
           children: [
             // Resep 1
-            resepCointainer(
+            resepContainer(
                 context, 'Resep Nasi Goreng', 'assets/nasigoreng.jpg', const ResepNasiGrng()
             ),
             //Resep 2
-            resepCointainer(
+            resepContainer(
                 context, 'Resep Telur Dadar', 'assets/telurdadar.jpg', const ResepTelurDDR()
             ),
             // Resep 3
-            resepCointainer(
+            resepContainer(
                 context, 'Resep Rendang Sapi', 'assets/rendang.jpg', const ResepRendang()
             ),
             // Resep 4
-            resepCointainer(
+            resepContainer(
                 context, 'Resep Bakso', 'assets/bakso.jpg', const ResepBakso()
             ),
             // Resep 5
-            resepCointainer(
+            resepContainer(
                 context, 'Resep Nasi Kuning', 'assets/nasikuning.jpg', const ResepNasiKng()
             ),
             // Resep 6
-            resepCointainer(
+            resepContainer(
                 context, 'Resep Capcay', 'assets/capcay.jpg', const ResepCapCay()
             ),
             // Resep 7
-            resepCointainer(
+            resepContainer(
                 context, 'Resep Ayam Goreng', 'assets/ayamgoreng.jpg', const ResepAyamGrng()
             ),
           ],
@@ -64,37 +64,61 @@ class RecipeAppMenu extends StatelessWidget {
   }
 }
 
-  Widget resepCointainer(BuildContext context, String title, String imgPath, Widget targetPage){
+  Widget resepContainer(BuildContext context, String title, String imgPath, Widget targetPage) {
     return Container(
       height: 150,
       width: 400,
       margin: const EdgeInsets.all(20),
       alignment: Alignment.center,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          image: DecorationImage(
-              image: AssetImage(imgPath),
-              fit: BoxFit.cover
-          )
+        borderRadius: BorderRadius.circular(30),
+        image: DecorationImage(
+          image: AssetImage(imgPath),
+          fit: BoxFit.cover,
+        ),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Text(
-            title,
-            style: const TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold ),
+          Stack(
+            children: <Widget>[
+              // Teks dengan outline
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = 2
+                    ..color = Colors.black,
+                ),
+              ),
+              // Teks solid di atas teks outline
+              Text(
+                title,
+                style: const TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
           ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => targetPage));
-              },
-              child: const Text('Lihat Resep'))
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => targetPage),
+              );
+            },
+            child: const Text('Lihat Resep'),
+          )
         ],
       ),
     );
   }
+
 
 
 class ResepNasiGrng extends StatelessWidget {
@@ -549,35 +573,28 @@ class AboutApp extends StatelessWidget {
         backgroundColor: Colors.blue,
         title: const Text('About App', style: TextStyle(color: Colors.white),),
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView(
           children: <Widget>[
-            Text(
-              'Resepku',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 10),
-            Text(
-              'Version: 1.0.0',
+            Image.asset('assets/applogo.png'),
+            const SizedBox(height: 10),
+            const Text(
+              'Version: 0.0.0',
               style: TextStyle(
                 fontSize: 18,
               ),
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Deskripsi:',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               'Resepku adalah sebuah aplikasi yang dirancang untuk para pecinta memasak, '
                   'baik pemula maupun yang sudah mahir dalam seni kuliner. '
                   'Aplikasi ini menyediakan beragam resep masakan dari berbagai belahan dunia, mulai dari masakan tradisional hingga masakan kontemporer. '
@@ -585,6 +602,7 @@ class AboutApp extends StatelessWidget {
                   'dan bahkan berbagi resep dengan teman-teman mereka.',
               style: TextStyle(
                 fontSize: 16,
+                fontWeight: FontWeight.bold
               ),
             ),
           ],
