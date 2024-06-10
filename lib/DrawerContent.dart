@@ -29,7 +29,7 @@ class Drawercontent extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.all(16.0),
             child: Text(
-              'Versi 1.0.0',
+              'Versi 0.0.0',
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.grey,
@@ -62,20 +62,17 @@ class Drawercontent extends StatelessWidget {
 }
 
 Widget drawerHeader(){
-  return const DrawerHeader(
-    decoration: BoxDecoration(
+  return DrawerHeader(
+    decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('assets/drawerimg.jpg'),
             fit: BoxFit.cover
         )
     ),
-      child: Align(
+    child: Align(
         alignment: Alignment.topCenter,
-        child: Text(
-          'Resepku',
-          style: TextStyle(
-              fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
-    )
+        child: Image.asset('assets/applogo.png'),
+    ),
   );
 }
 
