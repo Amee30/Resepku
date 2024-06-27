@@ -1,3 +1,4 @@
+import 'package:Resepku/ListShopping.dart';
 import 'package:Resepku/RecipeApp.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,11 @@ class Drawercontent extends StatelessWidget {
                 drawerItems(icon: Icons.menu_book, text: 'Masakan Indonesia', onTap: (){}),
                 drawerItems(icon: Icons.menu_book, text: 'Masakan Jepang', onTap: (){
                   _showAlertDialog(context);
+                }),
+                drawerItems(icon: Icons.list, text: 'Daftar Belanja', onTap: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Listshopping()));
                 }),
                 drawerItems(icon: Icons.info, text: 'About App', onTap: (){
                   Navigator.push(

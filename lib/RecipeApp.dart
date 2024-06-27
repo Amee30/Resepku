@@ -1,6 +1,8 @@
 import 'package:Resepku/DrawerContent.dart';
 import 'package:flutter/material.dart';
 
+import 'ListShopping.dart';
+
 class RecipeAppMenu extends StatelessWidget {
   RecipeAppMenu({super.key});
 
@@ -130,6 +132,16 @@ class ResepNasiGrng extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text('Resep Nasi Goreng', style: TextStyle(fontSize: 20, color: Colors.white),),
+        actions: [
+          IconButton(
+              onPressed: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Listshopping()));
+              },
+              icon: const Icon(Icons.list, color: Colors.white,)
+          )
+        ],
       ),
       body: ListView(
         children: [
@@ -184,6 +196,16 @@ class ResepTelurDDR extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text('Resep Telur Dadar', style: TextStyle(fontSize: 20, color: Colors.white),),
+        actions: [
+          IconButton(
+              onPressed: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Listshopping()));
+              },
+              icon: const Icon(Icons.list, color: Colors.white,)
+          )
+        ],
       ),
       body: ListView(
         children: [
@@ -230,6 +252,16 @@ class ResepRendang extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text('Resep Rendang Sapi', style: TextStyle(fontSize: 20, color: Colors.white),),
+        actions: [
+          IconButton(
+              onPressed: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Listshopping()));
+              },
+              icon: const Icon(Icons.list, color: Colors.white,)
+          )
+        ],
       ),
       body: ListView(
         children: [
@@ -290,6 +322,16 @@ class ResepBakso extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text('Resep Bakso', style: TextStyle(fontSize: 20, color: Colors.white),),
+        actions: [
+          IconButton(
+              onPressed: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Listshopping()));
+              },
+              icon: const Icon(Icons.list, color: Colors.white,)
+          )
+        ],
       ),
       body: ListView(
         children: [
@@ -370,6 +412,16 @@ class ResepNasiKng extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text('Resep Nasi Kuning', style: TextStyle(fontSize: 20, color: Colors.white),),
+        actions: [
+          IconButton(
+              onPressed: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Listshopping()));
+              },
+              icon: const Icon(Icons.list, color: Colors.white,)
+          )
+        ],
       ),
       body: ListView(
         children: [
@@ -445,6 +497,16 @@ class ResepCapCay extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text('Resep Cap Cay', style: TextStyle(fontSize: 20, color: Colors.white),),
+        actions: [
+          IconButton(
+              onPressed: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Listshopping()));
+              },
+              icon: const Icon(Icons.list, color: Colors.white,)
+          )
+        ],
       ),
       body: ListView(
         children: [
@@ -510,6 +572,16 @@ class ResepAyamGrng extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text('Resep Ayam Goreng', style: TextStyle(fontSize: 20, color: Colors.white),),
+        actions: [
+          IconButton(
+              onPressed: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Listshopping()));
+              },
+              icon: const Icon(Icons.list, color: Colors.white,)
+          )
+        ],
       ),
       body: ListView(
         children: [
